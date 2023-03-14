@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>homeServlet</servlet-name>
+        <servlet-class>Servlet.homeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listServlet</servlet-name>
+        <servlet-class>Servlet.listServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>Servlet.loginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>reportServlet1</servlet-name>
+        <servlet-class>Servlet.reportServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>setupServlet</servlet-name>
+        <servlet-class>Servlet.setupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>homeServlet</servlet-name>
+        <url-pattern>/homeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listServlet</servlet-name>
+        <url-pattern>/listServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reportServlet1</servlet-name>
+        <url-pattern>/reportServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>setupServlet</servlet-name>
+        <url-pattern>/setupServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>provinceList</param-name>
+        <param-value>An Giang;Kon Tum;Bà Rịa – Vũng Tàu;Lai Châu;Bắc Giang;Lâm Đồng;Bắc Kạn;Lạng Sơn;Bạc Liêu;Lào Cai;Bắc Ninh;Long An;Bến Tre;Nam Định;Bình Định;Nghệ An;Bình Dương;Ninh Bình;Bình Phước;Ninh Thuận;Bình Thuận;Phú Thọ;Cà Mau;Phú Yên;Cần Thơ;Quảng Bình;Cao Bằng;Quảng Nam;Đà Nẵng;Quảng Ngãi;Đắk Lắk;Quảng Ninh;Đắk Nông;Quảng Trị;Điện Biên;Sóc Trăng;Đồng Nai;Sơn La;Đồng Tháp;Tây Ninh;Gia Lai;Thái Bình;Hà Giang;Thái Nguyên;Hà Nam;Thanh Hóa;Hà Nội;Thừa Thiên Huế;Hà Tĩnh;Tiền Giang;Hải Dương;TP Hồ Chí Minh;Hải Phòng;Trà Vinh;Hậu Giang;Tuyên Quang;Hòa Bình;Vĩnh Long;Hưng Yên;Vĩnh Phúc;Khánh Hòa;Yên Bái;Kiên Giang</param-value>
+    </context-param>
+    <welcome-file-list>
+        <welcome-file>jsp/login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
