@@ -17,6 +17,41 @@
                 margin: auto;
                 padding-left: 200px;
             }
+
+            .csw-btn-button {
+                cursor: pointer;
+                font-size: 16px;
+                padding: 2px 8px;
+                color: #000 !important;
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #9B6A1D;
+                transition: 0.4s;
+            }
+            .csw-btn-button:hover {
+                background: #292929;
+            }
+            </style>
+                <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		header img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 100%;
+		}
+	</style>
         </style>
     </head>
     <body>
@@ -32,63 +67,68 @@
                         <%--Mức đóng--%>
                         <tr>
                             <td><b>Mức đóng</b></td>
+                            <td>(%)</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Quỹ hưu trí và tử tuất</td>
-                            <td><input type="text" name="fund1" value="${sessionScope.setupInform.getFundPercent().getFund1()}"></td>
+                            <td><input type="number" name="fund1" min="0" max="100" step="0.1" value="${sessionScope.setupInform.getFundPercent().getFund1()}"></td>
                             <td>Quỹ bảo hiểm thất nghiệp</td>
-                            <td><input type="text" name="fund3" value="${sessionScope.setupInform.getFundPercent().getFund3()}"></td>
+                            <td><input type="number" name="fund3" min="0" max="100" step="0.1" value="${sessionScope.setupInform.getFundPercent().getFund3()}"></td>
                         </tr>
                         <tr>
                             <td>Quỹ ốm đau thai sản</td>
-                            <td><input type="text" name="fund2" value="${sessionScope.setupInform.getFundPercent().getFund2()}"></td>
+                            <td><input type="number" name="fund2" min="0" max="100" step="0.1" value="${sessionScope.setupInform.getFundPercent().getFund2()}"></td>
                             <td>Quỹ bảo hiểm y tế</td>
-                            <td><input type="text" name="fund4" value="${sessionScope.setupInform.getFundPercent().getFund4()}"></td>
+                            <td><input type="number" name="fund4" min="0" max="100" step="0.1" value="${sessionScope.setupInform.getFundPercent().getFund4()}"></td>
                         </tr>
                         <tr>
                             <td>Tai nạn lao động</td>
-                            <td><input type="text" name="fund5" value="${sessionScope.setupInform.getFundPercent().getFund5()}"></td>
+                            <td><input type="number" name="fund5" min="0" max="100" step="0.1" value="${sessionScope.setupInform.getFundPercent().getFund5()}"></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <%--Mức đóng--%>
                         <tr>
                             <td><b>Mức đóng lương tối thiểu từng vùng</b></td>
+                            <td>(đồng/tháng)</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Vùng I</td>
-                            <td><input type="text" name="region1" value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion1()}"></td>
+                            <td><input type="number" name="region1" min="0" max="100000000"value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion1()}"></td>
+
                             <td>Vùng II</td>
-                            <td><input type="text" name="region2" value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion2()}"></td>
+                            <td><input type="number" name="region2" min="0"  max="100000000"value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion2()}"></td>
                         </tr>
                         <tr>
                             <td>Vùng III</td>
-                            <td><input type="text" name="region3" value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion3()}"></td>
+                            <td><input type="number" name="region3" min="0"  max="100000000"value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion3()}"></td>
                             <td>Vùng IV</td>
-                            <td><input type="text" name="region4" value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion4()}"></td>
+                            <td><input type="number" name="region4" min="0" max="100000000"value="${sessionScope.setupInform.getSalaryRegion().getSalaryRegion4()}"></td>
                         </tr>
                         <%--Mức đóng--%>
                         <tr>
                             <td><b>Hạn mức lương tham gia</b></td>
+                            <td>(đồng/tháng)</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Tối thiểu</td>
-                            <td><input type="text" name="minSalary" value="${sessionScope.setupInform.getSalaryLimit().getMinSalary()}"></td>
+                            <td><input type="number" name="minSalary" min="0" max="100000000" value="${sessionScope.setupInform.getSalaryLimit().getMinSalary()}"></td>
                             <td>tối đa</td>
-                            <td><input type="text" name="maxSalary" value="${sessionScope.setupInform.getSalaryLimit().getMaxSalary()}"></td>
+                            <td><input type="number" name="maxSalary" min="0" max="100000000" value="${sessionScope.setupInform.getSalaryLimit().getMaxSalary()}"></td>
                         </tr>
                         <tr>
                             <td><input type="submit" value="Lưu cấu hình"></td>
-                            <td></td>
+                           
+                            <td><a href="listServlet?action=return" class="csw-btn-button" target="_self" >Trở về</a></td>
                             <td></td>
                             <td></td>
                         </tr>

@@ -14,6 +14,27 @@
                 max-width: 500px;
                 margin: auto;
             }
+            </style>
+                <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		header img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 100%;
+		}
+	</style>
         </style>
     </head>
     <body>
@@ -21,7 +42,7 @@
             <img width="100%" src="image/BHXH.png">
         </div>
         <div class="content">
-            <h1>Đặng nhập tài khoản</h1>
+            <h1>Đăng nhập tài khoản</h1>
             <form action="loginServlet" method="post">
                 <table>
                     <tr>

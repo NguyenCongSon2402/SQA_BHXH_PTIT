@@ -15,6 +15,40 @@
                 max-width: 500px;
                 margin: auto;
             }
+            .csw-btn-button {
+                cursor: pointer;
+                font-size: 16px;
+                padding: 2px 8px;
+                color: #000 !important;
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #9B6A1D;
+                transition: 0.4s;
+            }
+            .csw-btn-button:hover {
+                background: #292929;
+            }
+            </style>
+                <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		header img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 100%;
+		}
+	</style>
         </style>
     </head>
     <body>
@@ -37,7 +71,7 @@
                         </td>
                         <td>
                             <select id="year" name="year">
-                                <c:forEach var = "i" begin = "2019" end = "2019">
+                                <c:forEach var = "i" begin = "2001" end = "2023">
                                     <option value="${i}">Năm ${i}</option>
                                 </c:forEach>
                             </select>
@@ -48,7 +82,7 @@
                     <tr>
                         <td>Trạng thái:</td>
                         <td>
-                            <input type="radio" name="status" value="1">Đã đóng bảo hiểm</br>
+                            <input type="radio" name="status" value="1" checked>Đã đóng bảo hiểm</br>
                             <input type="radio" name="status" value="2">Chưa đóng bảo hiểm</br>
                             <input type="radio" name="status" value="3">Đã nhận tiền trợ cấp</br>
                             <input type="radio" name="status" value="4">Chưa nhận trợ cấp</br>
@@ -67,12 +101,13 @@
                     <td></td>
                     <%-- Nút hiện thị--%>
                     <tr>
-                        <td><input type="submit" value="Hiển thị"></td>
-                        <td></td>
-                        <td></td>
+                        <td><input type="submit" value="Tìm kiếm"></td>
+                        
+                        <td><a href="listServlet?action=return" class="csw-btn-button" target="_self" >Trở về</a></td>
                     </tr>
                 </table>
             </form>
+           
         </div>
     </body>
 </html>

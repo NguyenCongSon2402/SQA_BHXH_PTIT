@@ -13,9 +13,31 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style>
             .content {
-                max-width: 300px;
+                max-width: 500px;
                 margin: auto;
             }
+            </style>
+                <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		header img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 100%;
+		}
+	</style>
+            
         </style>
     </head>
     <body>
@@ -29,10 +51,10 @@
                             <a href="homeServlet?action=list">Theo dõi danh sách</a>
                         </li>
                         <li>
-                            <a href="homeServlet?action=report">Báo cáo</a>
+                            <a href="homeServlet?action=report">Thống kê báo cáo</a>
                         </li>
                         <li>
-                            <a href="homeServlet?action=setup">Cấu hình</a>
+                            <a href="homeServlet?action=setup">Quản lý cấu hình</a>
                         </li>
                     </ul>
                 </div>

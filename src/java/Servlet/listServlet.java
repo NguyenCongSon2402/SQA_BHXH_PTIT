@@ -66,6 +66,11 @@ public class listServlet extends HttpServlet {
             dispatcher.forward(request, response);
 
         }
+        else{
+            url = "/jsp/home.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
 
     }
 

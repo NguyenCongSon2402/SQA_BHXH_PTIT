@@ -89,11 +89,7 @@ public class SetupInformDB {
             rs.next();
             minSalary = Double.parseDouble(rs.getString("valueLimit"));
             System.out.println(maxSalary + " " + minSalary);
-            if (maxSalary > minSalary) {
-                salaryLimit = new SalaryLimit(maxSalary, minSalary);
-            } else {
-                salaryLimit = new SalaryLimit(minSalary, maxSalary);
-            }
+            salaryLimit = new SalaryLimit(maxSalary,minSalary);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }

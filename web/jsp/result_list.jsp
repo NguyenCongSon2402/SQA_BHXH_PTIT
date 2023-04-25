@@ -11,9 +11,30 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
             .content {
-                max-width:600px;
+                max-width:500px;
                 margin: auto;
             }
+            </style>
+                <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			position: relative;
+			height: 100vh;
+			overflow: hidden;
+		}
+		header img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 100%;
+		}
+	</style>
         </style>
     </head>
     <body>
@@ -31,8 +52,9 @@
                             <th>HỌ VÀ TÊN</th>
                             <th>QUÊ QUÁN</th>
                             <th>NĂM SINH</th>
-                            <th>THỜI GIAN</th>
-                            <th>KHOẢN TIỀN</th>
+                            <th>NGÀY ĐĂNG KÍ</th>
+                            <th>SỐ TIỀN ĐÃ ĐÓNG</th>
+                            <th>LOẠI GÓI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,11 +66,12 @@
                             <td>${information.getMember().getBirthYear()}</td>
                             <th>${information.getFee().getTime()}</th>
                             <th>${information.getFee().getInsuarance()!=0?information.getFee().getInsuarance():information.getFee().getSubsidy()}</th>
+                            <th>6 tháng</th>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
-                <input type="submit" value="Quay trở lại">
+                <input type="submit" value="Trở về">
             </form>
         </div>
     </body>

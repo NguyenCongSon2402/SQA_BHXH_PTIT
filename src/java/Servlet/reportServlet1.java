@@ -25,34 +25,44 @@ public class reportServlet1 extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
+        String url = "";
         String month = (String) request.getParameter("month");
         String year = (String) request.getParameter("year");
+        String action = (String) request.getParameter("action");
         int index = Integer.parseInt(request.getParameter("prov"));
-        String messager2 = "";
-        String time3 = month + "-" + year;
-        String time1 = year + "-0" + month + "___";
-        //lấy danh sách
-        HttpSession session = request.getSession();
-        ArrayList<Province> provinceList = (ArrayList<Province>) session.getAttribute("provinceList");
-        String province = provinceList.get(index).getName();
-        System.out.println(province);
+        if (action.equals("timkiem")) {
+            String messager2 = "";
+            String time3 = month + "-" + year;
+            String time1 = year + "-0" + month + "___";
+            //lấy danh sách
+            HttpSession session = request.getSession();
+            ArrayList<Province> provinceList = (ArrayList<Province>) session.getAttribute("provinceList");
+            String province = provinceList.get(index).getName();
+            System.out.println(province);
 
 //        time3 = "1-2019";
 //        time1 = "2019-01___";
 //        province = "Nam Định";
-        int newMember, allMember, outMember;
-        MemberDB memberDB = new MemberDB();
-        newMember = memberDB.countMember(1, time1, province);
-        outMember = memberDB.countMember(2, time1, province);
-        allMember = memberDB.countMember(3, time3, province);
-        request.setAttribute("newMember", newMember);
-        request.setAttribute("allMember", allMember);
-        request.setAttribute("outMember", outMember);
+            int newMember, allMember, outMember;
+            MemberDB memberDB = new MemberDB();
+            newMember = memberDB.countMember(1, time1, province);
+            outMember = memberDB.countMember(2, time1, province);
+            allMember = memberDB.countMember(3, time3, province);
+            request.setAttribute("newMember", newMember);
+            request.setAttribute("allMember", allMember);
+            request.setAttribute("outMember", outMember);
+            url = "/jsp/result_report.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
 
         //chuyen giao dien
-        String url = "/jsp/result_report.jsp";
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+//        else {
+//            url = "/jsp/home.jsp";
+//            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+//        dispatcher.forward(request, response);
+//        }
+       
     }
 
     @Override
