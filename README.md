@@ -4,12 +4,14 @@
 # Báo cáo...
 Nếu cần hãy liên hệ tôi
 https://www.facebook.com/nguyencongsonxt?mibextid=LQQJ4d
-![image](https://user-images.githubusercontent.com/91744029/234232248-63a091fe-0304-469c-84b0-25468f86c5f5.png)
-![image](https://user-images.githubusercontent.com/91744029/225232001-33a4d380-7c93-4df6-a64f-4ae747f1be1a.png)
-![image](https://user-images.githubusercontent.com/91744029/234229889-f04d1b88-f86c-4c63-b621-72ae26cc6b85.png)
-![image](https://user-images.githubusercontent.com/91744029/234230016-000e0148-c5f1-497a-b121-0e4fce60c6d1.png)
-![image](https://user-images.githubusercontent.com/91744029/234230104-cc9bc9b1-0c5c-45ff-9585-865887f7a2ba.png)
-![image](https://user-images.githubusercontent.com/91744029/234230183-f747d3c3-abd0-48d2-b71c-cdef8423d1a6.png)
-![image](https://user-images.githubusercontent.com/91744029/234230236-1965e2a0-a01d-46ce-bcdb-d742d8baa5ac.png)
+![image](https://user-images.githubusercontent.com/91744029/234236349-1999b01a-d527-40b1-96ae-630ffaf6ad82.png)
+![image](https://user-images.githubusercontent.com/91744029/234236377-0fd5573a-617a-4e1a-980c-76c7fc4c090c.png)
+![image](https://user-images.githubusercontent.com/91744029/234236406-1b82f394-6b06-4091-88a6-ca14d36a711c.png)
+![image](https://user-images.githubusercontent.com/91744029/234236560-6716fca5-e2f5-4197-b217-cc9cb5df8d73.png)
+![image](https://user-images.githubusercontent.com/91744029/234236603-61d4bb27-f141-40d6-abe8-08752be5ed14.png)
+![image](https://user-images.githubusercontent.com/91744029/234236688-e19aaf60-9a21-4461-a8da-f853ff96d8f6.png)
+![image](https://user-images.githubusercontent.com/91744029/234236740-9fffb7f4-2b67-4da4-b3b1-f7c3ea59254e.png)
+
+
 
 
