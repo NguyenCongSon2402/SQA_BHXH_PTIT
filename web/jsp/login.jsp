@@ -14,6 +14,19 @@
                 max-width: 500px;
                 margin: auto;
             }
+            .csw-btn-button {
+                cursor: pointer;
+                font-size: 16px;
+                padding: 2px 8px;
+                color: #000 !important;
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #9B6A1D;
+                transition: 0.4s;
+            }
+            .csw-btn-button:hover {
+                background: #292929;
+            }
             </style>
                 <style type="text/css">
 		body {
@@ -59,7 +72,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="submit" value="Đăng nhập"></td>
+                        <td><input type="submit" class="csw-btn-button" value="Đăng nhập"></td>
                     </tr>
                 </table>
             </form>

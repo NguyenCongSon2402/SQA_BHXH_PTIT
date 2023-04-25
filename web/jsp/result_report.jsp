@@ -110,7 +110,7 @@
                     </tr>
                 </tbody>
             </table>
-                    <td><input type="button"value="Xuất báo cáo"></td>
+                    <td><input type="button" class="csw-btn-button" value="Xuất báo cáo"></td>
                     <td><a href="homeServlet?action=list" class="csw-btn-button" target="_self" >Trở về</a></td>
         </div>
     </body>

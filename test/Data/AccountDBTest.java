@@ -28,5 +28,6 @@ public class AccountDBTest {
     @Test
     public void testLoginWithInvalidCredentials() throws Exception {
         assertFalse(accountDB.Login("invalid", "credentials"));
+        assertFalse(accountDB.Login("", ""));
     }
 }

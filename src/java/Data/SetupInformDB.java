@@ -37,7 +37,7 @@ public class SetupInformDB {
     protected Connection getConnection() throws Exception {
         String userName = "root";
         String passWord = "2402";
-        String url = "jdbc:mysql://localhost:3306/bhxh?autoReconnect=true&useSSL=false";
+        String url = "jdbc:mysql://localhost:3306/bhxh?autoReconnect=true&useSSL=true";
         if (connection == null) {
             loadDriver();
             try {
@@ -81,19 +81,19 @@ public class SetupInformDB {
     public SalaryLimit getSalaryLimit() throws Exception {
         SalaryLimit salaryLimit = new SalaryLimit();
         String strSQL = "SELECT * FROM LIMIT_SALARY";
-        double maxSalary = 0, minSalary = 0;
+        long maxSalary = 0, minSalary = 0;
         try {
             rs = getStatement().executeQuery(strSQL);
             rs.next();
-            maxSalary = Double.parseDouble(rs.getString("valueLimit"));
+            maxSalary = Long.parseLong(rs.getString("valueLimit"));
             rs.next();
-            minSalary = Double.parseDouble(rs.getString("valueLimit"));
+            minSalary = Long.parseLong(rs.getString("valueLimit"));
             System.out.println(maxSalary + " " + minSalary);
             salaryLimit = new SalaryLimit(maxSalary,minSalary);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
-        closeConnection();
+        //closeConnection();
         return salaryLimit;
     }
 
@@ -164,12 +164,12 @@ public class SetupInformDB {
         pst.executeUpdate();
     }
 
-    public void setSalaryLimit(String type, double v) throws Exception {
+    public void setSalaryLimit(String type, long v) throws Exception {
         String strSQL = "UPDATE limit_salary "
                 + "SET limit_salary.valueLimit=? "
                 + "WHERE limit_salary.type=?";
         PreparedStatement pst = getConnection().prepareStatement(strSQL);
-        pst.setDouble(1, v);
+        pst.setLong(1, v);
         pst.setString(2, type);
         pst.executeUpdate();
     }

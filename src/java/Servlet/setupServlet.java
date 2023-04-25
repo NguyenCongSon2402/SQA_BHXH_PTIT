@@ -63,8 +63,8 @@ public class setupServlet extends HttpServlet {
                 || region2_String.equals("") || region3_String.equals("") || region4_String.equals("") || minSalary_String.equals("") || maxSalary_String.equals("")
                 || fund1_String.length() == 0 || fund2_String.length() == 0 || fund3_String.length() == 0 || fund4_String.length() == 0 || fund5_String.length() == 0 || region1_String.length() == 0
                 || region2_String.length() == 0 || region3_String.length() == 0 || region4_String.length() == 0 || minSalary_String.length() == 0 || maxSalary_String.length() == 0
-                || Double.parseDouble(minSalary_String) >= Double.parseDouble(maxSalary_String)) {
-            String messager3 = "Vui lòng nhập đúng thông tin";
+                || Long.parseLong(minSalary_String) >= Long.parseLong(maxSalary_String)) {
+            String messager3 = "Dữ liệu nhập vào không hợp lệ!";
             request.setAttribute("messager3", messager3);
             //chuyen giao dien
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
@@ -83,8 +83,8 @@ public class setupServlet extends HttpServlet {
                 long region3 = Long.parseLong(region3_String);
                 long region4 = Long.parseLong(region4_String);
                 //
-                double minSalary = Double.parseDouble(minSalary_String);
-                double maxSalary = Double.parseDouble(maxSalary_String);
+                long minSalary = Long.parseLong(minSalary_String);
+                long maxSalary = Long.parseLong(maxSalary_String);
 
                 SetupInform setupInform = new SetupInform(new FundPercent(fund1, fund2, fund3, fund4, fund5)
                         , new SalaryLimit(maxSalary, minSalary)

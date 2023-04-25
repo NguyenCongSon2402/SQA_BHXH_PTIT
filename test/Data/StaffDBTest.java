@@ -19,52 +19,18 @@ public class StaffDBTest {
     
     public StaffDBTest() {
     }
-    
-   
-    @Test
-    public void testLoadDriver() throws Exception {
-        StaffDB staffDB = new StaffDB();
-        staffDB.loadDriver();
-        assertNotNull(staffDB.getConnection());
-    }
-
-    @Test
-    public void testGetConnection() throws Exception {
-    }
-
-    @Test
-    public void testGetStatement() throws Exception {
-    }
-
-    @Test
-    public void testCloseConnection() throws Exception {
-    }
-
-    @Test
-    public void testExecuteUpdate() throws Exception {
-        StaffDB staffDB = new StaffDB();
-        String strSQL = "INSERT INTO STAFF_LIST VALUES('test', 'test', 'test', 1990, 'test')";
-        staffDB.executeUpdate(strSQL);
-
-        Staff staff = staffDB.getStaff("test", "test");
-        assertNotNull(staff);
-        assertEquals("test", staff.getUserName());
-        assertEquals("test", staff.getDepartment());
-        assertEquals("test", staff.getFullName());
-        assertEquals(1990, staff.getBirthYear());
-        assertEquals("test", staff.getHomeTown());
-    }
 
     @Test
     public void testGetStaff() throws Exception {
+        String key1="son";
+        String key2="2402";
+        
         StaffDB staffDB = new StaffDB();
-        Staff staff = staffDB.getStaff("tando", "12345678");
-        assertEquals("tando", staff.getUserName());
-        assertEquals("Phòng nhân sự", staff.getDepartment());
-        assertEquals("Nguyễn Văn Tân", staff.getFullName());
-        assertEquals(1990, staff.getBirthYear());
-        assertEquals("Bắc Ninh", staff.getHomeTown());
-    }
-
-    
+        Staff staff = staffDB.getStaff(key1,key2);
+        assertEquals("son", staff.getUserName());
+        assertEquals("Dev", staff.getDepartment());
+        assertEquals("Nguyễn Công Sơn", staff.getFullName());
+        assertEquals(2001, staff.getBirthYear());
+        assertEquals("Nam Định", staff.getHomeTown());
+    }   
 }

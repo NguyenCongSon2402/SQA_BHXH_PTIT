@@ -102,13 +102,5 @@ public class InformationDBTest {
             assertTrue(info.getFee().getSubsidy() != 0);
         }
     }
-
-    @Test
-    public void testCountFee() throws Exception {
-    }
-
-    @Test
-    public void testMain() {
-    }
     
 }

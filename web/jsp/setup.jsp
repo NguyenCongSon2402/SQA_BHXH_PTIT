@@ -126,7 +126,7 @@
                             <td><input type="number" name="maxSalary" min="0" max="100000000" value="${sessionScope.setupInform.getSalaryLimit().getMaxSalary()}"></td>
                         </tr>
                         <tr>
-                            <td><input type="submit" value="Lưu cấu hình"></td>
+                            <td><input type="submit" class="csw-btn-button" value="Lưu cấu hình"></td>
                            
                             <td><a href="listServlet?action=return" class="csw-btn-button" target="_self" >Trở về</a></td>
                             <td></td>

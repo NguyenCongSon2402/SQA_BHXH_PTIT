@@ -12,30 +12,30 @@ import java.io.Serializable;
  * @author CongSon
  */
 public class SalaryLimit implements Serializable{
-    private double maxSalary;
-    private double minSalary;
+    private long maxSalary;
+    private long minSalary;
 
     public SalaryLimit() {
     }
 
-    public SalaryLimit(double maxSalary, double minSalary) {
+    public SalaryLimit(long maxSalary, long minSalary) {
         this.maxSalary = maxSalary;
         this.minSalary = minSalary;
     }
 
-    public double getMaxSalary() {
+    public long getMaxSalary() {
         return maxSalary;
     }
 
-    public void setMaxSalary(double maxSalary) {
+    public void setMaxSalary(long maxSalary) {
         this.maxSalary = maxSalary;
     }
 
-    public double getMinSalary() {
+    public long getMinSalary() {
         return minSalary;
     }
 
-    public void setMinSalary(double minSalary) {
+    public void setMinSalary(long minSalary) {
         this.minSalary = minSalary;
     }
 

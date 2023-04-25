@@ -89,7 +89,7 @@
                     <td></td>
                     <%-- Nút hiện thị--%>
                     <tr>
-                        <td><input type="submit" value="Tìm kiếm"></td>
+                        <td><input type="submit" class="csw-btn-button" value="Tìm kiếm"></td>
             
                         <td><a href="listServlet?action=return" class="csw-btn-button" target="_self" >Trở về</a></td>
                     </tr>

@@ -14,6 +14,19 @@
                 max-width:500px;
                 margin: auto;
             }
+            .csw-btn-button {
+                cursor: pointer;
+                font-size: 16px;
+                padding: 2px 8px;
+                color: #000 !important;
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #9B6A1D;
+                transition: 0.4s;
+            }
+            .csw-btn-button:hover {
+                background: #292929;
+            }
             </style>
                 <style type="text/css">
 		body {
@@ -61,7 +74,7 @@
                     <c:forEach var="information" items="${requestScope.informationsList}">
                         <tr>
                             <td>${information.getMember().getId()}</td>
-                            <td>${information.getMember().getFullName()}</td>
+                            <td><a href="">${information.getMember().getFullName()}</a></td>
                             <td>${information.getMember().getHomeTown()}</td>
                             <td>${information.getMember().getBirthYear()}</td>
                             <th>${information.getFee().getTime()}</th>
@@ -71,7 +84,7 @@
                     </c:forEach>
                     </tbody>
                 </table>
-                <input type="submit" value="Trở về">
+                <input type="submit" class="csw-btn-button" value="Trở về">
             </form>
         </div>
     </body>
